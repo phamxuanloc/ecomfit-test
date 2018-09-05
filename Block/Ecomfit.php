@@ -79,13 +79,6 @@ class Ecomfit extends \Magento\Framework\View\Element\Template
         foreach ($this->_cacheFrontendPool as $cacheFrontend) {
             $cacheFrontend->getBackend()->clean();
         }
-        if ($this->scopeConfig->getValue('web_id', \Magento\Store\Model\ScopeInterface::SCOPE_STORE)) {
-            echo "Gia tri: " . $this->scopeConfig->getValue('web_id', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-//            die;
-        } else {
-            echo "Gia tri: " . $this->scopeConfig->getValue('web_id', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-
-        }
         return $this->scopeConfig->getValue('web_id', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 
